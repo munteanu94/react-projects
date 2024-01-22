@@ -1,0 +1,29 @@
+.containerSecond {
+  background-color: white;
+  text-align: center;
+}
+.containerSecond h2 {
+  font-size: 40px;
+  padding-top: 30px;
+}
+.Season {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 33px;
+  margin: 0px 50px;
+}
+.Season img {
+  width: 100%;
+}
+.Season a {
+  display: block;
+  padding: 10px 20px;
+  background-color: antiquewhite;
+  width: 30%;
+  margin: 20px auto;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.Season a:hover {
+  color: white;
+}

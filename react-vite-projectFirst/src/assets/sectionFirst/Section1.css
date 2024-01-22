@@ -1,0 +1,8 @@
+.sectionFirst {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sectionFirst .text {
+  text-align: center;
+}

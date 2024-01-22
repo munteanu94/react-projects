@@ -1,0 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+.mainContainer {
+  padding: 20px 50px;
+  background-color: rgb(234, 232, 232);
+}
