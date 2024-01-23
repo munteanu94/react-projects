@@ -8,7 +8,7 @@ export default function SectionFirst() {
   return (
     <section className="sectionFirst">
       <img src={img1} />
-      <img src={img2} />
+      <img src={img2} className="imgHide" />
       <div className="text">
         <h2>MEJIWOO</h2>
         <p>
@@ -16,7 +16,7 @@ export default function SectionFirst() {
           <br /> with MEJIWOO Korean Made
         </p>
       </div>
-      <img src={img3} />
+      <img src={img3} className="imgHide" />
       <img src={img4} />
     </section>
   );

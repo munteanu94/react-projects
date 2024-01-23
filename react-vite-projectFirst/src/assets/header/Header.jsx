@@ -1,6 +1,7 @@
 import { IoIosSearch } from "react-icons/io";
 import { BsHandbag } from "react-icons/bs";
 import { IoPersonOutline } from "react-icons/io5";
+import { BiMenuAltLeft } from "react-icons/bi";
 import "./Header.css";
 
 export default function Header() {
@@ -8,7 +9,10 @@ export default function Header() {
     <>
       <header>
         <nav className="navContainer">
-          <ul>
+          <div className="menuHide">
+            <BiMenuAltLeft />
+          </div>
+          <ul className="ulHide">
             <li>
               <a href="#">Home</a>
             </li>
