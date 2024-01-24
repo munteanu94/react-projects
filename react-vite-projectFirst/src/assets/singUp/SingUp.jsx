@@ -1,7 +1,9 @@
 import { TbSquareRotatedFilled } from "react-icons/tb";
 import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import ReactDOM from "react-dom/client";
 import "./SingUp.css";
+import { useState } from "react";
 export default function Sing() {
   return (
     <div className="ContainerSing">
@@ -26,28 +28,30 @@ export default function Sing() {
         </ul>
       </div>
       <div className="containerInput">
-        <ul>
-          <li>
-            <input type="text" placeholder="Full Name" />
-          </li>
-          <li>
-            <input type="text" placeholder="Email Adress" />
-          </li>
-          <li>
-            <input type="text" placeholder="Password" />
-          </li>
-          <li>
-            <input
-              type="checkbox"
-              className="checkbox"
-              name="vehicle1"
-              value="Bike"
-            />
-            I agree to all the <strong>Terms </strong>and{" "}
-            <strong>Privacy Policy</strong>
-          </li>
-        </ul>
-        <button>SING UP</button>
+        <form>
+          <ul>
+            <li>
+              <input type="text" placeholder="Full Name" />
+            </li>
+            <li>
+              <input type="text" placeholder="Email Adress" />
+            </li>
+            <li>
+              <input type="text" placeholder="Password" />
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                className="checkbox"
+                name="vehicle1"
+                value="Bike"
+              />
+              I agree to all the <strong>Terms </strong>and{" "}
+              <strong>Privacy Policy</strong>
+            </li>
+          </ul>
+          <button className="btnSinUp">SING UP</button>
+        </form>
         <div className="lineContainer">
           <div className="line1"></div>
           <p>Or</p>

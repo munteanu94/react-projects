@@ -12,6 +12,11 @@
   background-color: whitesmoke;
   margin-bottom: 20px;
 }
+.containerProducts h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
 .cart {
   text-align: center;
 }
@@ -39,11 +44,17 @@
   border: none;
   background-color: white;
 }
-.buttons button.active {
+.buttons button.active:hover {
   background-color: whitesmoke;
   border-radius: 5px 5px 0px 0px;
   text-decoration: underline;
-  text-decoration: ;
+  cursor: pointer;
+}
+.buttons button.active:focus {
+  background-color: whitesmoke;
+  border-radius: 5px 5px 0px 0px;
+  text-decoration: underline;
+  cursor: pointer;
 }
 @media (max-width: 850px) {
   .products {
