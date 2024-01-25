@@ -22,6 +22,7 @@ header {
   justify-content: space-between;
   align-items: center;
   margin: 0px 50px;
+  position: relative;
 }
 .navContainer ul {
   display: flex;
@@ -46,4 +47,28 @@ header {
 .icons {
   line-height: 32px;
   cursor: pointer;
+}
+.menuHide {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .menuHide {
+    display: block;
+    font-size: 30px;
+  }
+  .ulHide li {
+    display: none;
+  }
+  .show.sidebar {
+    display: block;
+  }
+}
+@media (max-width: 550px) {
+  .navContainer {
+    margin: 0;
+  }
+  .navContainer ul {
+    gap: 10px;
+  }
 }

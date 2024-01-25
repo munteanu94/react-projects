@@ -19,11 +19,37 @@
   display: block;
   padding: 10px 20px;
   background-color: antiquewhite;
-  width: 30%;
+  max-width: 100px;
   margin: 20px auto;
   border-radius: 15px;
   cursor: pointer;
 }
 .Season a:hover {
   color: white;
+}
+@media (max-width: 1000px) {
+  .Season {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "spring summer"
+      "winter winter";
+  }
+  .Season div:nth-child(1) {
+    grid-area: spring;
+  }
+  .Season div:nth-child(2) {
+    grid-area: summer;
+  }
+  .Season div:nth-child(3) {
+    grid-area: winter;
+  }
+}
+@media (max-width: 600px) {
+  .Season {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      "spring"
+      "summer"
+      "winter";
+  }
 }
