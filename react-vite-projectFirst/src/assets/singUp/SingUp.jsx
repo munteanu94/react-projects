@@ -1,10 +1,28 @@
 import { TbSquareRotatedFilled } from "react-icons/tb";
 import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import ReactDOM from "react-dom/client";
 import "./SingUp.css";
 import { useState } from "react";
+import Validation from "./Validation.jsx";
 export default function Sing() {
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+
+  const [errors, setErrors] = useState({});
+
+  function handleInput(event) {
+    const newObj = { ...values, [event.target.name]: event.target.value };
+    setValues(newObj);
+  }
+  function handleValidation(event) {
+    event.preventDefault();
+
+    setErrors(Validation(values));
+  }
+
   return (
     <div className="ContainerSing">
       <div className="textList">
@@ -28,17 +46,37 @@ export default function Sing() {
         </ul>
       </div>
       <div className="containerInput">
-        <form>
+        <form onSubmit={handleValidation}>
           <ul>
             <li>
-              <input type="text" placeholder="Full Name" />
+              <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                onChange={handleInput}
+              />
             </li>
+            {errors.name && <p style={{ color: "red" }}>{errors.name}</p>}
             <li>
-              <input type="text" placeholder="Email Adress" />
+              <input
+                type="text"
+                name="email"
+                placeholder="Email Adress"
+                onChange={handleInput}
+              />
             </li>
+            {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
             <li>
-              <input type="text" placeholder="Password" />
+              <input
+                type="text"
+                name="password"
+                placeholder="Password"
+                onChange={handleInput}
+              />
             </li>
+            {errors.password && (
+              <p style={{ color: "red" }}>{errors.password}</p>
+            )}
             <li>
               <input
                 type="checkbox"
